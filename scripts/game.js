@@ -6,6 +6,7 @@ let updateNote = document.getElementById("updatenote");
 let data;
 let isVideo = false;
 let model = null;
+let loadingmessages;
 const trackingButtonHTML = '<button onclick = "toggleVideo()" class="btn btn-primary mt-1" id="trackbutton">Enable Video</button>'
 
 const modelParams = {
@@ -50,6 +51,10 @@ function runDetection() {
         if (isVideo) requestAnimationFrame(runDetection);
     });
 }
+loadingmessages = setInterval(()=>{
+    if(trackButton) return;
+    if(FUNNIES) document.getElementById("funnies").innerText = FUNNIES[Math.floor(Math.random()*FUNNIES.length)]
+}, 80);
 
 window.onload = function () {
     // Load the model.
@@ -66,6 +71,7 @@ window.onload = function () {
         trackButton = document.getElementById("trackbutton");
         setup();
         trackButton.disabled = false;
+        clearInterval(loadingmessages);
     });
 };
 

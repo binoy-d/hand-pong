@@ -28,13 +28,15 @@ canvas {
 
 #updatenote {
   position:absolute;
-  height:10%;
   top:50%;
   left: 50%;
   transform: translate(-50%,-50%);
+}
+
+.updatenote-title{
   color: rgb(226, 226, 226);
-  font-size: xx-large;
-  font-weight: bold;
+  font-size: xx-large!important;
+  font-weight: bold!important;
 }
 
 #trackbutton {
@@ -70,3 +72,7 @@ canvas {
   display:none;
 }
 
+#funnies{
+  color: rgb(226, 226, 226);
+  font-size: large;
+}
