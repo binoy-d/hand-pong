@@ -22,7 +22,7 @@ function startVideo() {
             updateNote.innerText = "Video started. Now tracking";
             isVideo = true;
             runDetection();
-            if(trackButton) trackButton.remove();
+            if (trackButton) trackButton.remove();
         } else {
             updateNote.innerText = "Please enable video";
         }
@@ -46,23 +46,27 @@ function runDetection() {
         //console.log("Predictions: ", predictions);
         data = predictions;
         model.renderPredictions(predictions, video_canvas, context, video);
-        
+
         if (isVideo) requestAnimationFrame(runDetection);
     });
 }
 
-// Load the model.
-handTrack.load(modelParams).then((lmodel) => {
-    // detect objects in the image.
-    model = lmodel;
-    updateNote.innerText = "Loaded Model!";
-    var div = document.createElement('div');
-    div.innerHTML = trackingButtonHTML;
-    while (div.children.length > 0) {
-        document.getElementById("header-top").appendChild(div.children[0]);
-    }
-    document.getElementById("updatenote").remove();
-    trackButton = document.getElementById("trackbutton");
-    setup();
-    trackButton.disabled = false;
-});
+window.onload = function () {
+    // Load the model.
+    handTrack.load(modelParams).then((lmodel) => {
+        // detect objects in the image.
+        model = lmodel;
+        updateNote.innerText = "Loaded Model!";
+        var div = document.createElement('div');
+        div.innerHTML = trackingButtonHTML;
+        while (div.children.length > 0) {
+            document.getElementById("header-top").appendChild(div.children[0]);
+        }
+        document.getElementById("updatenote").remove();
+        trackButton = document.getElementById("trackbutton");
+        setup();
+        trackButton.disabled = false;
+    });
+};
+
+
