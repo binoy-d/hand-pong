@@ -439,6 +439,7 @@ function tickBall() {
         if (ball.y > p.y - ph / 2 && ball.y < p.y + ph / 2) {
             if (ball.x > p.x - pw / 2 && ball.x < p.x + pw / 2) {
                 ball.vx = -ball.vx;
+                ball.x+=ball.vx;
             }
         }
     });
