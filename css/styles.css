@@ -2,7 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(rgb(0, 0, 0), rgb(83, 83, 83));
+  background-image: linear-gradient(rgb(0, 0, 0), rgb(49, 49, 49));
 }
 
 canvas {
@@ -75,4 +75,11 @@ canvas {
 #funnies{
   color: rgb(226, 226, 226);
   font-size: large;
+}
+
+#credit{
+  color:white;
+  position:absolute;
+  bottom:1em;
+  right:1em;
 }
