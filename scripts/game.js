@@ -339,8 +339,8 @@ function windowResized() {
     //clamp it
     canvw = min(canvw, MAX_CANVAS_WIDTH);
     canvh = min(canvh, MAX_CANVAS_HEIGHT);
-    players[0].x = PADDLE_OFFSET;
-    players[1].x = canvw - PADDLE_OFFSET;
+    players[0].x = WIDTH_OFFSET+PADDLE_OFFSET;
+    players[1].x = canvw - WIDTH_OFFSET- PADDLE_OFFSET;
     resizeCanvas(canvw, canvh);
 }
 
