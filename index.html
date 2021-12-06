@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P.O.N.G</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handtrackjs/dist/handtrack.min.js"> </script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" >
+</head>
+
+<body>
+    <div class = "mt-1 container-fluid text-center everything">
+        <div class = "mt-1 row text-center">
+            <div class="col" id = "header-top">
+                <div class="updatenote" id="updatenote">Loading</div>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col text-center">
+                <div id = "canvas-wrapper">
+                </div>
+            </div>
+            
+        </div>
+        <div class="row text-center">
+            <div class="col text-center h-100">
+                <video class="videobox canvasbox" autoplay="autoplay" id="myvideo"></video>
+                <canvas id="video-canvas" class="border canvasbox"></canvas>
+            </div>
+        </div>
+        
+    </div>
+    
+
+    <script src="scripts/tracking.js"></script>
+    <script src="scripts/game.js"></script>
+</body>
+
+</html>

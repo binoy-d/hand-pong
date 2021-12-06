@@ -1,0 +1,71 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(rgb(0, 0, 0), rgb(29, 29, 29));
+}
+
+canvas {
+  display: block;
+}
+
+.canvas-wrapper {
+  width: 80%;
+  height: 600px !important;
+}
+
+.everything {
+  background-color: black;
+}
+
+#video-canvas {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+#updatenote {
+  position:absolute;
+  height:10%;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: rgb(226, 226, 226);
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+#trackbutton {
+  transition: all 0.15s ease-in;
+  position:absolute;
+  height:10%;
+  width:20%;
+  top:50%;
+  left:50%;
+  border-radius:0.5em;
+  transform: translate(-50%,-50%);
+  font-size: xx-large;
+  font-weight: bolder;
+  background-color: rgb(219, 219, 219);
+  color:black;
+}
+
+#trackbutton:hover{
+  background-color: white;
+  /*box-shadow: 0.1em 0.1em 0.1em 0.1em 0.5em white ;*/
+  transform: translate(-50%,-50%) scale(1.02);
+}
+#defaultCanvas0 {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 100%;
+}
+
+#myvideo {
+  display:none;
+}
+
